@@ -12,7 +12,7 @@
 
 ## Heroku Link
 
-* https://Reforma.herokuapp.com/
+* https://reformakerek.herokuapp.com/
 
 ## API Description
 
