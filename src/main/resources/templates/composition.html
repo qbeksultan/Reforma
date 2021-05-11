@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reforma Official WebSite</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 navbar-dark bg-light border-bottom shadow-sm">
+    <a class="p-2 text-danger" href="/"><img src="https://st-1.akipress.org/st_dolbor/elections/parties2020/208_m.png" width="156" height="106" alt="Reforma"></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <nav class="my-2 my-md-0 me-md-3">
+                    <a class="p-2 text-primary" href="/">Home Page</a>
+                    <a class="p-2 text-primary" href="/composition">Party Composition</a>
+                    <a class="p-2 text-primary" href="/about">About</a>
+                    <a class="p-2 text-primary" href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="col-2">
+                <a  class="p-2 text-primary" href="/reforma-add">Add New Person</a>
+                <a  class="p-2 text-primary" href="/reforma-add-party">Add New Party</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="jumbotron bg-light w-100 h-100 d-flex justify-content-center">
+    <div class="container">
+        <h1 class="display-3 text-primary d-flex justify-content-center">Party Composition</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-xl-3 col-sm-6 mb-5" style="height: 295px" th:each="el:${reforma}">
+            <a th:href="'/person/' + ${el.id}">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img th:src="${el.image}" alt="" width="100" height="145" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0" th:text="${el.name}"></h5><span class="small text-uppercase text-muted" th:text="${el.job}"></span>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

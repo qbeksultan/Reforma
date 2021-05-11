@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reforma Official WebSite</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 navbar-dark bg-light border-bottom shadow-sm">
+    <a class="p-2 text-danger" href="/"><img src="https://st-1.akipress.org/st_dolbor/elections/parties2020/208_m.png" width="156" height="106" alt="Reforma"></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <nav class="my-2 my-md-0 me-md-3">
+                    <a class="p-2 text-primary" href="/">Home Page</a>
+                    <a class="p-2 text-primary" href="/composition">Party Composition</a>
+                    <a class="p-2 text-primary" href="/about">About</a>
+                    <a class="p-2 text-primary" href="/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="col-2">
+                <a  class="p-2 text-primary" href="/reforma-add">Add New Person</a>
+                <a  class="p-2 text-primary" href="/reforma-add-party">Add New Party</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container mt-5 mb-5">
+    <h1 class="text-danger">Add Party</h1>
+    <form action="/reforma-add-party" method="post">
+        <input type="text" name="title" placeholder="Title" class="form-control bg-light text-primary"><br>
+        <input type="text" name="info" placeholder="Information" class="form-control bg-light text-primary"><br>
+        <input type="text" name="url" placeholder="Image 1:1.5" class="form-control bg-light text-primary"><br><br>
+        <button type="submit" class="btn btn-primary">Add Party</button>
+    </form>
+</div>
+</body>
+</html>
